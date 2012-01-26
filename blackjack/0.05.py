@@ -66,21 +66,21 @@ class Deal(object):
         get_first_card = self.get_card_and_deck(self.card, self.deck)
         deck = self.card_or_deck(get_first_card, 'deck')
         first_card = self.card_or_deck(get_first_card, 'card')
-        print "this is first_card\n"
+        print "this is first_card\n"#, first_card
         
         get_dealer_card = self.get_card_and_deck(first_card, deck)
         deck = self.card_or_deck(get_dealer_card, 'deck')
         dealer_card = self.card_or_deck(get_dealer_card, 'card')
-        print "This is dealer_card\n", dealer_card
+        print "This is dealer_card\n"#, dealer_card
 
         get_second_card = self.get_card_and_deck(dealer_card, deck)        
         deck = self.card_or_deck(get_second_card, 'deck')
         second_card = self.card_or_deck(get_second_card, 'card')
-        print "This is second_card\n"
+        print "This is second_card\n"#, second_card
 
         hand = [first_card, second_card, dealer_card]
         return hand
-        
+
 
     def get_card_and_deck(self, card, deck):
         deck = self.deck
@@ -97,6 +97,7 @@ class Deal(object):
         self.card_and_deck = card_and_deck
         #print self.card_and_deck[0]
         if switch == 'card':
+            print self.card_and_deck[0]
             return self.card_and_deck[0]
         elif switch == 'deck':
             return self.card_and_deck[1]
